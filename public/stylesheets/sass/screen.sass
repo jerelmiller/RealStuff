@@ -1,0 +1,282 @@
+/* Color Variables */
+$blue: #627085
+$brown: #69523d
+//$blue_gray: #7F8EA1
+$blue_gray: #C7DFFF
+$tan: #CEC8BB
+$dark_initial_gradient: #4D4D4C
+$dark_final_gradient: #3D3D3C
+
+/* Font Variables */
+
+$just_me: 'Just Me Again Down Here', 'Helvetica'
+$schoolbell: 'Walter Turncoat', 'Helvetica'
+$coming_soon: 'Coming Soon', 'Coming Soon'
+
+/* Mixins */
+@mixin box_shadow($color: #222, $x: 0px, $y: 2px, $blur: 2px, $spread: 0px)
+  -moz-box-shadow: $x $y $blur $spread $color
+  -webkit-box-shadow: $x $y $blur $spread $color
+  box-shadow: $x $y $blur $spread $color
+
+@mixin border_radius_all($radius: 5px)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  border-radius: $radius
+
+@mixin border_radius_top($radius: 5px)
+  -moz-border-radius: $radius $radius 0 0
+  -webkit-border-radius: $radius $radius 0 0
+  border-radius: $radius $radius 0 0
+
+@mixin border_radius_bottom($radius: 5px)
+  -moz-border-radius: 0 0 $radius $radius
+  -webkit-border-radius: 0 0 $radius $radius
+  border-radius: 0 0 $radius $radius
+
+@mixin linear_gradient($point, $start_color, $start_percent, $end_color, $end_percent)
+  background: linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
+  background: -o-linear-gradient($point, $start_color $start_percent, $end_color, $end_percent)
+  background: -moz-linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
+  background: -webkit-linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
+  background: -webkit-gradient(linear, $point, color-stop($start_percent, $start_color), color-stop($end_percent, $end_color))
+  background: -ms-linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color')
+
+@mixin radial_gradient_texture($point, $start_color, $start_percent, $end_color, $end_percent, $texture)
+  background: radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
+  background: -o-radial-gradient($point, $start_color $start_percent, $end_color, $end_percent), $texture
+  background: -moz-radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
+  background: -webkit-radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
+  background: -webkit-gradient(radial, $point, color-stop($start_percent, $start_color), color-stop($end_percent, $end_color)), $texture
+  background: -ms-radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
+  //filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color')
+/* General Styles */
+
+html, body
+  margin: 0
+  padding: 0
+  //height: 100%
+  width: 100%
+  min-width: 1000px
+  //background: rgba(127,142,161,.5)//$blue_gray
+  @include radial_gradient_texture(top, rgba(127,142,161,.5), 20%, rgba(127,142,161,.8), 80%, url(/images/Texture.png))
+  //background: url(/images/web_pattern3.png)
+
+a
+  text-decoration: none
+  color: black
+  &:visited
+    color: black
+  &:hover
+    color: black
+
+hr
+  width: 1000px
+  //color: #000 !important
+  //background-color: #000 !important
+  border: 2px solid black
+  @include box_shadow(#CCC, 0, 1px, 2px)
+
+
+/* General Classes */
+.left
+  float: left
+
+.right
+  float: right
+
+.clear
+  clear: both
+
+.no_margin_left
+  margin-left: 0 !important
+
+.header
+  height: 260px
+  width: 100%
+  min-width: 1000px
+  .header_top
+    //height: 150px
+    height: 50px
+    //background: $blue_gray
+    @include linear_gradient(top, $dark_initial_gradient, 15%, $dark_final_gradient, 65%)
+    @include box_shadow(#CCC, 0, 1px, 3px)
+    //margin-bottom: 50px
+    ul.quicknav
+      font-family: $schoolbell
+      
+      margin: 0
+      .small_margin
+        margin-left: 5px
+      li
+        margin-left: 30px
+      a
+        color: white
+      img
+        height: 30px
+        width: 30px
+        opacity: .7
+        padding: 0
+        position: relative
+        top: 8px
+        &:hover
+          opacity: 1
+    .header_top_container
+      width: 1000px
+      height: 10px
+      margin: 0 auto
+      ul.quicknav
+        list-style-type: none
+        color: white
+        li
+          display: inline
+      //#logo
+      //  //background: #CCC
+      //  padding: 20px
+      //  @include border_radius_bottom
+      //ul.menu
+      //  list-style-type: none
+      //  margin: 0 !important
+      //  //background: #CCC
+      //  height: 50px
+      //  position: relative
+      //  top: 80px
+      //  padding: 10px 25px
+      //  li
+      //    position: relative
+      //    //top: 40px
+      //    display: inline
+      //    line-height: 50px
+      //    vertical-align: bottom
+      //    margin-left: 90px
+      //    font-size: 1.7em
+      //    font-family: $schoolbell
+      //    padding: 0 10px
+      //    &:hover
+      //      border-bottom: 3px solid black
+  .header_bottom
+    height: 220px
+    //background: #CCC
+    .header_bottom_container
+      margin: 0 auto
+      width: 1000px
+      height: 220px
+      #logo
+        //background: #CCC
+        //padding: 20px
+        @include border_radius_bottom
+        //position: relative
+        //bottom: 60px
+      #catch_phrase
+        font-family: 'Walter Turncoat'
+        text-shadow: 0px 1px 1px white
+        padding: 50px 0px 50px
+        text-align: center
+        font-size: 2.3em
+        vertical-align: middle
+        .large_phrase
+          font-size: 2.2em
+
+
+//.menu_section
+//  width: 100%
+//  //@include linear_gradient(top, $dark_initial_gradient, 10%, $dark_final_gradient, 90%)
+//  background: $dark_initial_gradient
+//  height: 150px
+//  min-width: 1000px
+.menu_container
+  width: 1000px
+  margin: 0 auto
+  height: 100px
+  //background: $dark_initial_gradient
+  //@include border_radius_all
+  //@include box_shadow(#CCC, 0, 2px, 2px)
+  //background: white
+  ul.menu
+    line-height: 100px
+    list-style-type: none
+    margin: 0 auto
+    width: 760px
+    //background: black
+    //color: white
+    text-shadow: 0px 1px 1px white
+    //padding: 10px 30px
+    //@include border_radius_all(2px)
+    //@include linear_gradient(top, $dark_initial_gradient, 10%, $dark_final_gradient, 80%)
+    //@include box_shadow(#ccc, 0px, 1px)
+    font-size: 1.5em
+    font-family: $schoolbell
+    .no_margin_right
+      margin-right: 0 !important
+    li
+      display: inline
+      margin-right: 95px
+      padding: 0 10px
+      &:hover
+        border-bottom: 3px solid black
+      a
+        //color: white
+        text-shadow: none
+        &:hover
+          //color: #bdb7aa
+    
+      //border-left: 2px solid white
+      //border-right: 2px solid white
+      //#catch_phrase
+      //  margin: 0
+      //  width: 650px
+      //  height: 100px
+      //  line-height: 100px
+      //  font-family: $just_me
+      //  font-size: 3em
+      //  text-align: right
+
+.content
+  width: 1000px
+  margin: 0 auto
+  //padding-bottom: 50px
+  //border: 1px solid blue
+  margin-bottom: 250px
+  .stuff
+    width: 480px
+    height: 400px
+    background: #DDD
+    //background-image: #CCC, url(/images/texture3.png)
+
+  .stuff2
+    width: 500px
+    height: 200px
+    background: #DDD
+    margin-top: 20px
+  .stuff3
+    margin-top: 20px
+    width: 480px
+    height: 345px
+    background: #DDD
+  .media
+    //width: 500px
+    //border: 1px solid
+    //height: 350px
+    //background: #DDD
+    //padding: 20px 0
+    .video
+      //margin: 0 auto
+      //width: 450px
+  .stuff4
+    width: 500px
+    height: 180px
+    background: #DDD
+    margin-top: 20px
+      
+.footer
+  margin-top: -150px
+  clear: both
+  height: 150px
+  min-width: 1000px
+  background: $dark_final_gradient
+.wrapper
+  min-height: 100%
+
+
+  

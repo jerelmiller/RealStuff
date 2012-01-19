@@ -1,0 +1,163 @@
+/* Color Variables */
+/* Font Variables */
+/* Mixins */
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1000px;
+  background: radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png);
+  background: -o-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8), 80%), url(/images/Texture.png);
+  background: -moz-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png);
+  background: -webkit-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png);
+  background: -webkit-gradient(radial, top, color-stop(20%, rgba(127, 142, 161, 0.5)), color-stop(80%, rgba(127, 142, 161, 0.8))), url(/images/Texture.png);
+  background: -ms-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png); }
+
+a {
+  text-decoration: none;
+  color: black; }
+  a:visited {
+    color: black; }
+  a:hover {
+    color: black; }
+
+hr {
+  width: 1000px;
+  border: 2px solid black;
+  -moz-box-shadow: 0 1px 2px 0px #cccccc;
+  -webkit-box-shadow: 0 1px 2px 0px #cccccc;
+  box-shadow: 0 1px 2px 0px #cccccc; }
+
+/* General Classes */
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+.no_margin_left {
+  margin-left: 0 !important; }
+
+.header {
+  height: 260px;
+  width: 100%;
+  min-width: 1000px; }
+  .header .header_top {
+    height: 50px;
+    background: linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
+    background: -o-linear-gradient(top, #4d4d4c 15%, #3d3d3c, 65%);
+    background: -moz-linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
+    background: -webkit-linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
+    background: -webkit-gradient(linear, top, color-stop(15%, #4d4d4c), color-stop(65%, #3d3d3c));
+    background: -ms-linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color');
+    -moz-box-shadow: 0 1px 3px 0px #cccccc;
+    -webkit-box-shadow: 0 1px 3px 0px #cccccc;
+    box-shadow: 0 1px 3px 0px #cccccc; }
+    .header .header_top ul.quicknav {
+      font-family: "Walter Turncoat", "Helvetica";
+      margin: 0; }
+      .header .header_top ul.quicknav .small_margin {
+        margin-left: 5px; }
+      .header .header_top ul.quicknav li {
+        margin-left: 30px; }
+      .header .header_top ul.quicknav a {
+        color: white; }
+      .header .header_top ul.quicknav img {
+        height: 30px;
+        width: 30px;
+        opacity: 0.7;
+        padding: 0;
+        position: relative;
+        top: 8px; }
+        .header .header_top ul.quicknav img:hover {
+          opacity: 1; }
+    .header .header_top .header_top_container {
+      width: 1000px;
+      height: 10px;
+      margin: 0 auto; }
+      .header .header_top .header_top_container ul.quicknav {
+        list-style-type: none;
+        color: white; }
+        .header .header_top .header_top_container ul.quicknav li {
+          display: inline; }
+  .header .header_bottom {
+    height: 220px; }
+    .header .header_bottom .header_bottom_container {
+      margin: 0 auto;
+      width: 1000px;
+      height: 220px; }
+      .header .header_bottom .header_bottom_container #logo {
+        -moz-border-radius: 0 0 5px 5px;
+        -webkit-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px; }
+      .header .header_bottom .header_bottom_container #catch_phrase {
+        font-family: "Walter Turncoat";
+        text-shadow: 0px 1px 1px white;
+        padding: 50px 0px 50px;
+        text-align: center;
+        font-size: 2.3em;
+        vertical-align: middle; }
+        .header .header_bottom .header_bottom_container #catch_phrase .large_phrase {
+          font-size: 2.2em; }
+
+.menu_container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100px; }
+  .menu_container ul.menu {
+    line-height: 100px;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 760px;
+    text-shadow: 0px 1px 1px white;
+    font-size: 1.5em;
+    font-family: "Walter Turncoat", "Helvetica"; }
+    .menu_container ul.menu .no_margin_right {
+      margin-right: 0 !important; }
+    .menu_container ul.menu li {
+      display: inline;
+      margin-right: 95px;
+      padding: 0 10px; }
+      .menu_container ul.menu li:hover {
+        border-bottom: 3px solid black; }
+      .menu_container ul.menu li a {
+        text-shadow: none; }
+
+.content {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 250px; }
+  .content .stuff {
+    width: 480px;
+    height: 400px;
+    background: #dddddd; }
+  .content .stuff2 {
+    width: 500px;
+    height: 200px;
+    background: #dddddd;
+    margin-top: 20px; }
+  .content .stuff3 {
+    margin-top: 20px;
+    width: 480px;
+    height: 345px;
+    background: #dddddd; }
+  .content .stuff4 {
+    width: 500px;
+    height: 180px;
+    background: #dddddd;
+    margin-top: 20px; }
+
+.footer {
+  margin-top: -150px;
+  clear: both;
+  height: 150px;
+  min-width: 1000px;
+  background: #3d3d3c; }
+
+.wrapper {
+  min-height: 100%; }
