@@ -1,16 +1,19 @@
 /* Color Variables */
 $blue: #627085
 $brown: #69523d
+$red: #bf1d37
 //$blue_gray: #7F8EA1
 $blue_gray: #C7DFFF
 $tan: #CEC8BB
 $dark_initial_gradient: #4D4D4C
 $dark_final_gradient: #3D3D3C
+$blue_initial_gradient: rgba(127,142,161,.5)
+$blue_final_gradient: rgba(127,142,161,.8)
 
 /* Font Variables */
 
 $just_me: 'Just Me Again Down Here', 'Helvetica'
-$schoolbell: 'Walter Turncoat', 'Helvetica'
+$walter_turncoat: 'Walter Turncoat', 'Helvetica'
 $coming_soon: 'Coming Soon', 'Coming Soon'
 
 /* Mixins */
@@ -60,8 +63,9 @@ html, body
   width: 100%
   min-width: 1000px
   //background: rgba(127,142,161,.5)//$blue_gray
-  @include radial_gradient_texture(top, rgba(127,142,161,.5), 20%, rgba(127,142,161,.8), 80%, url(/images/Texture.png))
+  @include radial_gradient_texture(top, $blue_initial_gradient, 20%, $blue_final_gradient, 80%, url(/images/Texture.png))
   //background: url(/images/web_pattern3.png)
+  font-family: $walter_turncoat
 
 a
   text-decoration: none
@@ -72,11 +76,11 @@ a
     color: black
 
 hr
-  width: 1000px
+  //width: 1000px
   //color: #000 !important
   //background-color: #000 !important
-  border: 2px solid black
-  @include box_shadow(#CCC, 0, 1px, 2px)
+  //border: 2px solid black
+  //@include box_shadow(#CCC, 0, 1px, 2px)
 
 
 /* General Classes */
@@ -92,6 +96,9 @@ hr
 .no_margin_left
   margin-left: 0 !important
 
+.bold
+  font-weight: bold
+
 .header
   height: 260px
   width: 100%
@@ -104,7 +111,7 @@ hr
     @include box_shadow(#CCC, 0, 1px, 3px)
     //margin-bottom: 50px
     ul.quicknav
-      font-family: $schoolbell
+      //font-family: $walter_turncoat
       
       margin: 0
       .small_margin
@@ -151,7 +158,7 @@ hr
       //    vertical-align: bottom
       //    margin-left: 90px
       //    font-size: 1.7em
-      //    font-family: $schoolbell
+      //    font-family: $walter_turncoat
       //    padding: 0 10px
       //    &:hover
       //      border-bottom: 3px solid black
@@ -171,7 +178,7 @@ hr
       #catch_phrase
         font-family: 'Walter Turncoat'
         text-shadow: 0px 1px 1px white
-        padding: 50px 0px 50px
+        padding: 50px 0px 30px
         text-align: center
         font-size: 2.3em
         vertical-align: middle
@@ -200,13 +207,13 @@ hr
     width: 760px
     //background: black
     //color: white
-    text-shadow: 0px 1px 1px white
+    //text-shadow: 0px 1px 1px white
     //padding: 10px 30px
     //@include border_radius_all(2px)
     //@include linear_gradient(top, $dark_initial_gradient, 10%, $dark_final_gradient, 80%)
     //@include box_shadow(#ccc, 0px, 1px)
     font-size: 1.5em
-    font-family: $schoolbell
+    //font-family: $walter_turncoat
     .no_margin_right
       margin-right: 0 !important
     li
@@ -217,7 +224,7 @@ hr
         border-bottom: 3px solid black
       a
         //color: white
-        text-shadow: none
+        //text-shadow: none
         &:hover
           //color: #bdb7aa
     
@@ -237,44 +244,168 @@ hr
   margin: 0 auto
   //padding-bottom: 50px
   //border: 1px solid blue
-  margin-bottom: 250px
-  .stuff
-    width: 480px
-    height: 400px
-    background: #DDD
-    //background-image: #CCC, url(/images/texture3.png)
+  margin-bottom: 270px
+  //font-family: $coming_soon
+  .content_div
+    //background: white
+    background: url(/images/cow_pattern3.png)
+    margin: 10px 0
+    width: 490px
+    //padding: 30px
+    .content_div_container
+      margin: 30px
+    hr
+      width: 100px
+      text-align: left !important
+      margin-left: 0
+      border: 1px solid black
+    .content_header
+      //text-align: center
+      //padding: 10px 30px 0
+      font-size: 2em
+      //width: 30%
+      //background: #CCC
+      //border-bottom: 3px solid black
+      //padding-bottom: 10px
+    .body
+      font-size: 1.5em
+      margin: 40px 0 20px
+      text-align: justify
+  #welcome
+    span.red
+      color: #bf1d37
+    .content_header
+      font-size: 3.5em !important
+      font-weight: bold
+      //width: 100%
+      text-align: center
+      //border: none
+      //padding: none
+    //font-size: 1.7em
+  #events
+    .event
+      width: 95%
+      padding: 10px
+      background: #E2E2E2
+      margin: 20px 0
+      .date
+        background: white
+        height: 105px
+        width: 110px
+        padding-top: 5px
+        @include border_radius_all(60px)
+        .day
+          text-align: center
+          font-size: 45px
+          color: $blue
+        .month_year
+          text-align: center
+          span.blue
+            color: $blue
 
-  .stuff2
-    width: 500px
+      .title
+        font-size: 1.5em
+        margin-left: 20px
+        width: 250px
+        text-align: center
+        color: $blue
+      .info
+        margin: 10px 0 0 20px
+        width: 270px
+        .time
+          width: 100px
+          text-align: right
+          line-height: 60px
+          span.time
+            font-size: 1.6em
+
+        .address
+          //text-align: right
+          width: 170px
+    .see_more
+      font-size: 1.2em
+      text-align: right
+      //font-style: italic
+      a
+        &:hover
+          color: $red
+
+  #media
+    background: none !important
+  #pics
+    height: 300px
+    background: none !important
+    img
+      height: 300px
+      width: 490px
+
+  #news
     height: 200px
-    background: #DDD
-    margin-top: 20px
-  .stuff3
-    margin-top: 20px
-    width: 480px
-    height: 345px
-    background: #DDD
-  .media
-    //width: 500px
-    //border: 1px solid
-    //height: 350px
-    //background: #DDD
-    //padding: 20px 0
-    .video
-      //margin: 0 auto
-      //width: 450px
-  .stuff4
-    width: 500px
-    height: 180px
-    background: #DDD
-    margin-top: 20px
       
 .footer
-  margin-top: -150px
+  margin-top: -220px
   clear: both
-  height: 150px
+  height: 220px
   min-width: 1000px
   background: $dark_final_gradient
+  padding: 40px 0 0
+  .footer_container
+    margin: 0 auto
+    width: 1000px
+    .info
+      #company
+        color: white
+        font-size: 50px
+        text-shadow: 0 1px 1px #888
+        line-height: .9em
+        span.small
+          font-size: 40px
+      #phone
+        color: #AAA
+        text-shadow: 0 1px 1px #666
+        font-size: 32px
+      #email
+        font-size: 1.3em
+        a
+          color: $blue
+          &:hover
+            border-bottom: 2px solid
+  #copyright
+    margin: 145px 0 0 100px
+    color: white
+  .footer_right
+    #connect
+      font-size: 2em
+      color: white
+      .links
+        font-size: .6em
+        margin-top: 15px
+        .margin
+          margin-top: 10px
+        .left
+          line-height: 30px
+          margin-left: 5px
+          color: #DDD
+        img
+          height: 30px
+          width: 30px
+      #facebook
+        &:hover
+          #facebook_img
+            background: url(/images/facebook.png)
+        #facebook_img
+          height: 30px
+          width: 30px
+          background: url(/images/facebook_bw.png)
+      #twitter
+        &:hover
+          #twitter_img
+            background: url(/images/twitter.png)
+          #twitter_img
+            height: 30px
+            width: 30px
+            background: url(/images/twitter_bw.png)
+          
 .wrapper
   min-height: 100%
 

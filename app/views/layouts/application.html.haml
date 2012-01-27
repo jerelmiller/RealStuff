@@ -51,9 +51,35 @@
           %li= link_to 'Services', root_path
           %li.no_margin_right= link_to 'About Us', root_path
       -#%hr
-  
-      .clear
+
       = yield
-      
     .footer
+      .footer_container
+        .info.left
+          #company
+            The Real Stuff 
+            %br
+            %span.small Ice Cream
+          #phone
+            (970) 396-7316
+          #email
+            = mail_to 'info@therealstufficecream.com'
+        #copyright.left
+          Copyright &copy; 2012
+        .footer_right.right
+          #connect
+            Stay Connected
+            .links
+              #facebook.margin
+                #facebook_img.left
+                .left
+                  Facebook
+                .clear
+              #twitter.margin
+                = image_tag '/images/twitter.png', :class => 'left'
+                .left
+                  Twitter
+                .clear
+
+        .clear
 

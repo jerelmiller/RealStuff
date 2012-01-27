@@ -1,13 +1,78 @@
 -#%h1 Home#index
 -#%p Find me in app/views/home/index.html.erb
 .content
-  .stuff.left
-  .media.right
-    .video
-      <iframe src="http://player.vimeo.com/video/21218942?title=0&amp;byline=0&amp;portrait=0" width="500" height="340" frameborder="0"></iframe>
-  .stuff2.right
-  .stuff3.left
-  .stuff4.right
+  #welcome.content_div.left
+    .content_div_container
+      .content_header
+        It's Flavor You Can't Ignore
+      .body
+        The Real Stuff Ice Cream is made from scratch with fresh ingredients so you are 
+        %span.red GUARANTEED 
+        the best flavor
+  #pics.content_div.right
+    = image_tag '/images/ice_cream.jpg'
+
+
+  #events.content_div.right
+    .content_div_container
+      .content_header
+        Events
+      %hr
+      .event
+        .date.left
+          .day
+            05
+          .month_year
+            %span.blue Feb 
+            2012
+        .title.left
+          Farmer's Market
+        .info.left
+          .time.right
+            %span.time 12:00
+            pm
+          .address.left
+            1234 Main St
+            %br
+            Ft Collins, CO
+          .clear
+        .clear
+      .event
+        .date.left
+          .day
+            26
+          .month_year
+            %span.blue July 
+            2012
+        .title.left
+          Heaven Fest
+        .info.left
+          .time.right
+            %span.time 9:00
+            am
+          .address.left
+            The Ranch
+            %br
+            Loveland, CO
+        .clear
+
+      .see_more
+        = link_to 'View All Events', root_path
+
+  #feature_flavor.content_div.left
+    .content_div_container
+      .content_header
+        Feature Flavor
+      %hr
+  #news.content_div.left
+    .content_div_container
+      .content_header
+        News
+      %hr
+      
+  -##media.content_div.right
+  -#  .video
+  -#    <iframe src="http://player.vimeo.com/video/21218942?title=0&amp;byline=0&amp;portrait=0" width="490" height="330" frameborder="0"></iframe>
 
 
   .clear
