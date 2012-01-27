@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: 1000px;
+  min-width: 1100px;
   background: radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png);
   background: -o-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8), 80%), url(/images/Texture.png);
   background: -moz-radial-gradient(top, rgba(127, 142, 161, 0.5) 20%, rgba(127, 142, 161, 0.8) 80%), url(/images/Texture.png);
