@@ -246,6 +246,8 @@ hr
   //border: 1px solid blue
   margin-bottom: 270px
   //font-family: $coming_soon
+  a
+    color: $blue
   .content_div
     //background: white
     background: url(/images/cow_pattern3.png)
@@ -339,8 +341,32 @@ hr
       height: 300px
       width: 490px
 
+  #feature_flavor
+    .body
+      margin-top: 0
+      span.red
+        color: $red
+    
   #news
-    height: 200px
+    .body
+      margin-top: 10px
+    .article
+      .news_title
+        color: $blue
+        font-size: 1.4em
+      .news_body
+        margin-top: 10px
+        font-size: 1.2em
+        text-align: justify
+        span.continue
+          color: $blue
+          margin-top: 10px
+          font-size: .8em
+          &:hover
+            border-bottom: 2px solid 
+      
+
+  
       
 .footer
   margin-top: -220px
@@ -380,6 +406,8 @@ hr
       .links
         font-size: .6em
         margin-top: 15px
+        a
+          color: #DDD
         .margin
           margin-top: 10px
         .left
@@ -397,14 +425,28 @@ hr
           height: 30px
           width: 30px
           background: url(/images/facebook_bw.png)
+          a
+            display: block
+            height: 30px
+            width: 30px
+        .like
+          margin-right: 0
       #twitter
         &:hover
           #twitter_img
             background: url(/images/twitter.png)
-          #twitter_img
+        #twitter_img
+          height: 30px
+          width: 30px
+          background: url(/images/twitter_bw.png)
+          a
+            display: block
             height: 30px
             width: 30px
-            background: url(/images/twitter_bw.png)
+        .tweet
+          position: relative
+          left: 15px
+          top: 5px
           
 .wrapper
   min-height: 100%

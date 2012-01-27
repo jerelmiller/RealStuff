@@ -124,6 +124,8 @@ a {
   width: 1000px;
   margin: 0 auto;
   margin-bottom: 270px; }
+  .content a {
+    color: #627085; }
   .content .content_div {
     background: url(/images/cow_pattern3.png);
     margin: 10px 0;
@@ -198,8 +200,25 @@ a {
     .content #pics img {
       height: 300px;
       width: 490px; }
-  .content #news {
-    height: 200px; }
+  .content #feature_flavor .body {
+    margin-top: 0; }
+    .content #feature_flavor .body span.red {
+      color: #bf1d37; }
+  .content #news .body {
+    margin-top: 10px; }
+  .content #news .article .news_title {
+    color: #627085;
+    font-size: 1.4em; }
+  .content #news .article .news_body {
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: justify; }
+    .content #news .article .news_body span.continue {
+      color: #627085;
+      margin-top: 10px;
+      font-size: 0.8em; }
+      .content #news .article .news_body span.continue:hover {
+        border-bottom: 2px solid; }
 
 .footer {
   margin-top: -220px;
@@ -237,6 +256,8 @@ a {
     .footer .footer_right #connect .links {
       font-size: 0.6em;
       margin-top: 15px; }
+      .footer .footer_right #connect .links a {
+        color: #dddddd; }
       .footer .footer_right #connect .links .margin {
         margin-top: 10px; }
       .footer .footer_right #connect .links .left {
@@ -252,12 +273,26 @@ a {
       height: 30px;
       width: 30px;
       background: url(/images/facebook_bw.png); }
+      .footer .footer_right #connect #facebook #facebook_img a {
+        display: block;
+        height: 30px;
+        width: 30px; }
+    .footer .footer_right #connect #facebook .like {
+      margin-right: 0; }
     .footer .footer_right #connect #twitter:hover #twitter_img {
       background: url(/images/twitter.png); }
-    .footer .footer_right #connect #twitter:hover #twitter_img {
+    .footer .footer_right #connect #twitter #twitter_img {
       height: 30px;
       width: 30px;
       background: url(/images/twitter_bw.png); }
+      .footer .footer_right #connect #twitter #twitter_img a {
+        display: block;
+        height: 30px;
+        width: 30px; }
+    .footer .footer_right #connect #twitter .tweet {
+      position: relative;
+      left: 15px;
+      top: 5px; }
 
 .wrapper {
   min-height: 100%; }

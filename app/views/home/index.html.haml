@@ -12,7 +12,6 @@
   #pics.content_div.right
     = image_tag '/images/ice_cream.jpg'
 
-
   #events.content_div.right
     .content_div_container
       .content_header
@@ -64,11 +63,24 @@
       .content_header
         Feature Flavor
       %hr
+      .body
+        This month's feature flavor is 
+        %span.red Cake Batter
+
   #news.content_div.left
     .content_div_container
       .content_header
         News
       %hr
+      .article
+        .news_title
+          =link_to 'Introducing Real StuffCakes', root_path
+        .news_body
+          We have a new product! Real StuffCakes! Head on out to Zoe's to check it out today! We promise you will love the new Real...
+          %br
+          %br
+          %span.continue= link_to 'Continue Reading', root_path
+          -#StuffCake. Imagine biting into a cupcake filled with the delicious flavor of Real Stuff Ice Cream topped with a delicious cream cheese frosting. Now that your mouth is watering, come try it out!
       
   -##media.content_div.right
   -#  .video
