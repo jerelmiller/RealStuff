@@ -24,72 +24,10 @@
     -#    .header_bottom_container
     -#      #catch_phrase.right Taste So Good You Won't Need Toppings!
     .wrapper
-      .header
-        .header_top
-          .header_top_container
-            %ul.quicknav.right
-              %li= link_to 'Contact Us', root_path
-              %li= link_to image_tag('/images/facebook.png'), root_path
-              %li.small_margin= link_to image_tag('/images/twitter.png'), root_path
-        .header_bottom
-          .header_bottom_container
-            #logo.left
-              = link_to image_tag('/images/logo_realstuff.png'), root_path
-            #catch_phrase.right
-              %span.large_phrase
-                Taste So Good
-              %br
-              You Won't Need Toppings
-            .clear
-      .clear
-      -#%hr
-      -#.menu_section
-      .menu_container
-        %ul.menu
-          %li= link_to 'Home', root_path
-          %li= link_to 'Products', root_path
-          %li= link_to 'Services', root_path
-          %li.no_margin_right= link_to 'About Us', root_path
-      -#%hr
+      = render :partial => 'layouts/header'
+      = render :partial => 'layouts/menu'
 
       = yield
-    .footer
-      .footer_container
-        .info.left
-          #company
-            The Real Stuff 
-            %br
-            %span.small Ice Cream
-          #phone
-            (970) 396-7288
-          #email
-            = mail_to 'info@therealstufficecream.com'
-        #copyright.left
-          Copyright &copy; 2012
-        .footer_right.right
-          #connect
-            Stay Connected
-            .links
-              #facebook.margin
-                #facebook_img.left
-                  = link_to ' ', 'http://www.facebook.com/TheRealStuffIceCream', :target => '_blank'
-                .left
-                  = link_to 'Facebook', 'http://www.facebook.com/TheRealStuffIceCream', :target => '_blank'
-                .like.right
-                  %script
-                    (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";   fjs.parentNode.insertBefore(js, fjs); }(    document,     'script', 'facebook-jssdk'));
-                  %fb:like{:href => 'http://www.facebook.com/TheRealStuffIceCream', :send => 'false', :layout => 'button_count', :width => '50', :show_faces => 'false', :font => 'lucida grande'}
-                .clear
-              #twitter.margin
-                #twitter_img.left
-                  = link_to ' ', 'http://www.twitter.com/TheRealStuffCO', :target => '_blank'
-                .left
-                  = link_to 'Twitter', 'http://www.twitter.com/TheRealStuffCO', :target => '_blank'
-                .tweet.right
-                  =link_to 'Tweet', 'https://twitter.com/share', :class => 'twitter-share-button', "data-count" => 'horizontal', "data-text" => 'Check out The Real Stuff Ice Cream\'s website!', "data-via" => 'TheRealStuffCO'
-                  %script{:type => 'text/javascript', :src => 'http://platform.twitter.com/widgets.js'}
-                .clear
-              
-
-        .clear
+    = render :partial => 'layouts/footer'
+    .clear
 
