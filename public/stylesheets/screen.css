@@ -86,8 +86,7 @@ a {
     .header .header_bottom .header_bottom_container {
       margin: 0 auto;
       width: 1000px;
-      height: 220px;
-      background: url(/images/cow_pattern.png); }
+      height: 220px; }
       .header .header_bottom .header_bottom_container #logo {
         padding-left: 20px; }
       .header .header_bottom .header_bottom_container #catch_phrase {
