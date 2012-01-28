@@ -86,7 +86,8 @@ a {
     .header .header_bottom .header_bottom_container {
       margin: 0 auto;
       width: 1000px;
-      height: 220px; }
+      height: 220px;
+      background: white; }
       .header .header_bottom .header_bottom_container #logo {
         -moz-border-radius: 0 0 5px 5px;
         -webkit-border-radius: 0 0 5px 5px;
@@ -109,7 +110,8 @@ a {
     line-height: 100px;
     list-style-type: none;
     margin: 0 auto;
-    width: 760px;
+    width: 960px;
+    background: white;
     font-size: 1.5em; }
     .menu_container ul.menu .no_margin_right {
       margin-right: 0 !important; }
