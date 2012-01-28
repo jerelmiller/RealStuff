@@ -100,7 +100,7 @@ hr
   font-weight: bold
 
 .header
-  height: 260px
+  height: 270px
   width: 100%
   min-width: 1000px
   .header_top
@@ -169,16 +169,19 @@ hr
       margin: 0 auto
       width: 1000px
       height: 220px
+      background: url(/images/cow_pattern.png)
       #logo
         //background: #CCC
         //padding: 20px
-        @include border_radius_bottom
+        //@include border_radius_bottom
+        padding-left: 20px
         //position: relative
         //bottom: 60px
       #catch_phrase
         font-family: 'Walter Turncoat'
         text-shadow: 0px 1px 1px white
-        padding: 50px 0px 30px
+        //padding: 50px 0px 0px
+        margin-top: 50px
         text-align: center
         font-size: 2.3em
         vertical-align: middle
@@ -199,12 +202,15 @@ hr
   //background: $dark_initial_gradient
   //@include border_radius_all
   //@include box_shadow(#CCC, 0, 2px, 2px)
-  //background: white
+  background: url(/images/cow_pattern.png)
   ul.menu
     line-height: 100px
     list-style-type: none
-    margin: 0 auto
-    width: 760px
+    margin-top: 20px
+    //margin: 0 auto
+    margin-left: 80px
+    //width: 760px
+    width: 960px
     //background: black
     //color: white
     //text-shadow: 0px 1px 1px white
@@ -221,12 +227,14 @@ hr
       margin-right: 95px
       padding: 0 10px
       &:hover
-        border-bottom: 3px solid black
+        //border-bottom: 3px solid black
       a
         //color: white
+        color: $blue
         //text-shadow: none
         &:hover
           //color: #bdb7aa
+          color: $red
     
       //border-left: 2px solid white
       //border-right: 2px solid white
@@ -243,7 +251,8 @@ hr
   width: 1000px
   margin: 0 auto
   //border: 1px solid blue
-  margin-bottom: 270px
+  margin-bottom: 230px
+  margin-top: 10px
   //font-family: $coming_soon
   a
     color: $blue
