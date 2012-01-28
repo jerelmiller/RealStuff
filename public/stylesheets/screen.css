@@ -120,10 +120,10 @@ a {
       padding: 0 10px; }
       .menu_container ul.menu li:hover {
         border-bottom: 3px solid black; }
+        .menu_container ul.menu li:hover a {
+          color: #bf1d37; }
       .menu_container ul.menu li a {
         color: #627085; }
-        .menu_container ul.menu li a:hover {
-          color: #bf1d37; }
 
 .content {
   width: 1000px;
