@@ -102,8 +102,7 @@ a {
 .menu_container {
   width: 1000px;
   margin: 0 auto;
-  height: 100px;
-  background: url(/images/cow_pattern.png); }
+  height: 100px; }
   .menu_container ul.menu {
     line-height: 100px;
     list-style-type: none;
@@ -117,10 +116,8 @@ a {
       display: inline;
       margin-right: 95px;
       padding: 0 10px; }
-      .menu_container ul.menu li a {
-        color: #627085; }
-        .menu_container ul.menu li a:hover {
-          color: #bf1d37; }
+      .menu_container ul.menu li:hover {
+        border-bottom: 3px solid black; }
 
 .content {
   width: 1000px;
