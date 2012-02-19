@@ -4,6 +4,10 @@ RealStuff::Application.routes.draw do
   root :to => 'home#index'
 
   match 'products' => 'home#products'
+  match 'services' => 'home#services'
+  match 'about' => 'about#index'
+  match 'about/media' => 'about#media'
+  match 'about/story' => 'about#story'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

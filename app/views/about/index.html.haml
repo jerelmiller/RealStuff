@@ -1,0 +1,40 @@
+- content_for :title do
+  About Us
+
+
+#sidemenu.about_div_left.left
+  .content_div_container
+    %ul.sidenav
+      %li= link_to 'The Story', about_story_path
+      %li= link_to 'Media', about_media_path
+      %li= link_to 'Another link', ''
+
+#about.about_div_right.right
+  .content_div_container
+    .content_header
+      No fake ingredients. 
+      %br
+      We use
+      %span.red The Real Stuff
+
+    .story_text
+      %p
+        We don't use pre-packaged mixes. We use actual milk, fresh eggs, and homemade baked 
+        goodies like brownies and fudge.
+        And we use the safest process to 
+        ensure you get the best tasting ice cream experience ever.
+
+#info.about_div_left.left
+  .content_div_container
+    %p
+      555-555-5555
+    %p
+      Located at:
+    %p
+      Zoe's Cafe
+      %br
+      715 10th St. 
+      %br
+      Greeley, CO 80631
+
+.clear
