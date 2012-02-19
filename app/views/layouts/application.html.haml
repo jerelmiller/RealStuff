@@ -26,8 +26,8 @@
     .wrapper
       = render :partial => 'layouts/header'
       = render :partial => 'layouts/menu'
-
-      = yield
+      .content
+        = yield
     = render :partial => 'layouts/footer'
     .clear
 

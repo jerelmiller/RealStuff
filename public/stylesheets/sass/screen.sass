@@ -44,7 +44,7 @@ $coming_soon: 'Coming Soon', 'Coming Soon'
   background: -webkit-linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
   background: -webkit-gradient(linear, $point, color-stop($start_percent, $start_color), color-stop($end_percent, $end_color))
   background: -ms-linear-gradient($point, $start_color $start_percent, $end_color $end_percent)
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=$start_color, endColorstr=$end_color)
 
 @mixin radial_gradient_texture($point, $start_color, $start_percent, $end_color, $end_percent, $texture)
   background: radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture

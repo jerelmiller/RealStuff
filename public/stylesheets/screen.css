@@ -51,7 +51,7 @@ a {
     background: -webkit-linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
     background: -webkit-gradient(linear, top, color-stop(15%, #4d4d4c), color-stop(65%, #3d3d3c));
     background: -ms-linear-gradient(top, #4d4d4c 15%, #3d3d3c 65%);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=$start_color, endColorstr=$end_color);
     -moz-box-shadow: 0 1px 3px 0px #cccccc;
     -webkit-box-shadow: 0 1px 3px 0px #cccccc;
     box-shadow: 0 1px 3px 0px #cccccc; }

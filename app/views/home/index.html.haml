@@ -1,91 +1,85 @@
 -#%h1 Home#index
 -#%p Find me in app/views/home/index.html.erb
-.content
-  #welcome.content_div.left
-    .content_div_container
-      .content_header
-        It's Flavor You Can't Ignore
-      .body
-        The Real Stuff Ice Cream is made from scratch with fresh ingredients so you are 
-        %span.red GUARANTEED 
-        the best flavor
-  #pics.content_div.right
-    = image_tag '/images/ice_cream.jpg'
-
-  #events.content_div.right
-    .content_div_container
-      .content_header
-        Events
-      %hr
-      .event
-        .date.left
-          .day
-            05
-          .month_year
-            %span.blue Feb 
-            2012
-        .title.left
-          Farmer's Market
-        .info.left
-          .time.right
-            %span.time 12:00
-            pm
-          .address.left
-            1234 Main St
-            %br
-            Ft Collins, CO
-          .clear
+-#.content
+#welcome.content_div.left
+  .content_div_container
+    .content_header
+      It's Flavor You Can't Ignore
+    .body
+      The Real Stuff Ice Cream is made from scratch with fresh ingredients so you are 
+      %span.red GUARANTEED 
+      the best flavor
+#pics.content_div.right
+  = image_tag '/images/ice_cream.jpg'
+#events.content_div.right
+  .content_div_container
+    .content_header
+      Events
+    %hr
+    .event
+      .date.left
+        .day
+          05
+        .month_year
+          %span.blue Feb 
+          2012
+      .title.left
+        Farmer's Market
+      .info.left
+        .time.right
+          %span.time 12:00
+          pm
+        .address.left
+          1234 Main St
+          %br
+          Ft Collins, CO
         .clear
-      .event
-        .date.left
-          .day
-            26
-          .month_year
-            %span.blue July 
-            2012
-        .title.left
-          Heaven Fest
-        .info.left
-          .time.right
-            %span.time 9:00
-            am
-          .address.left
-            The Ranch
-            %br
-            Loveland, CO
-        .clear
-
-      .see_more
-        = link_to 'View All Events', root_path
-
-  #feature_flavor.content_div.left
-    .content_div_container
-      .content_header
-        Feature Flavor
-      %hr
-      .body
-        This month's feature flavor is
+      .clear
+    .event
+      .date.left
+        .day
+          26
+        .month_year
+          %span.blue July 
+          2012
+      .title.left
+        Heaven Fest
+      .info.left
+        .time.right
+          %span.time 9:00
+          am
+        .address.left
+          The Ranch
+          %br
+          Loveland, CO
+      .clear
+    .see_more
+      = link_to 'View All Events', root_path
+#feature_flavor.content_div.left
+  .content_div_container
+    .content_header
+      Feature Flavor
+    %hr
+    .body
+      This month's feature flavor is
+      %br
+      %span.red Cake Batter
+#news.content_div.left
+  .content_div_container
+    .content_header
+      News
+    %hr
+    .article
+      .news_title
+        =link_to 'Introducing Real StuffCakes', root_path
+      .news_body
+        We have a new product! Real StuffCakes! Head on out to Zoe's to check it out today! We promise you will love the newReal...
         %br
-        %span.red Cake Batter
-
-  #news.content_div.left
-    .content_div_container
-      .content_header
-        News
-      %hr
-      .article
-        .news_title
-          =link_to 'Introducing Real StuffCakes', root_path
-        .news_body
-          We have a new product! Real StuffCakes! Head on out to Zoe's to check it out today! We promise you will love the new Real...
-          %br
-          %br
-          %span.continue= link_to 'Continue Reading', root_path
-          -#StuffCake. Imagine biting into a cupcake filled with the delicious flavor of Real Stuff Ice Cream topped with a delicious cream cheese frosting. Now that your mouth is watering, come try it out!
-      
-  -##media.content_div.right
-  -#  .video
-  -#    <iframe src="http://player.vimeo.com/video/21218942?title=0&amp;byline=0&amp;portrait=0" width="490" height="330" frameborder="0"></iframe>
-
-
-  .clear
+        %br
+        %span.continue= link_to 'Continue Reading', root_path
+        -#StuffCake. Imagine biting into a cupcake filled with the delicious flavor of Real Stuff Ice Cream topped with adelicious cream cheese frosting. Now that your mouth is watering, come try it out!
+    
+-##media.content_div.right
+-#  .video
+-#    <iframe src="http://player.vimeo.com/video/21218942?title=0&amp;byline=0&amp;portrait=0" width="490" height="330"frameborder="0"></iframe>
+.clear
