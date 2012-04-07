@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @news.id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @news.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @news.body %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @news.date %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @news.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>

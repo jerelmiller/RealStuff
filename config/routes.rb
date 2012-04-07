@@ -1,4 +1,20 @@
 RealStuff::Application.routes.draw do
+  resources :roles
+
+  resources :users
+
+  resources :news
+
+  resources :events
+
+  resources :sizes
+
+  resources :feature_flavors
+
+  resources :flavors
+
+  resources :products
+
   get "home/index"
 
   root :to => 'home#index'
