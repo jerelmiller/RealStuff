@@ -1,10 +1,8 @@
 class CreateNews < ActiveRecord::Migration
   def self.up
     create_table :news do |t|
-      t.integer :id
       t.string :title
-      t.text :body
-      t.datetime :date
+      t.text :body, :default => nil
       t.integer :user_id
 
       t.timestamps

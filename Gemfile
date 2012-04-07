@@ -9,6 +9,7 @@ gem 'will_paginate'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'sorcery'
 
 # Use unicorn as the web server
 # gem 'unicorn'

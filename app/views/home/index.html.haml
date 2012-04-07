@@ -54,7 +54,7 @@
           Loveland, CO
       .clear
     .see_more
-      = link_to 'View All Events', root_path
+      = link_to 'View All Events', root_url(:subdomain => 'admin')
 #feature_flavor.content_div.left
   .content_div_container
     .content_header
@@ -71,7 +71,7 @@
     %hr
     .article
       .news_title
-        =link_to 'Introducing Real StuffCakes', root_path
+        =link_to 'Introducing Real StuffCakes', root_url
       .news_body
         We have a new product! Real StuffCakes! Head on out to Zoe's to check it out today! We promise you will love the newReal...
         %br
