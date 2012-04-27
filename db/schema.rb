@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120407080954) do
     t.string   "salt"
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
