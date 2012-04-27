@@ -3,8 +3,14 @@ RealStuff::Application.routes.draw do
 
   resources :products
 
-  constraints(Subdomain) do
-    match '/' => 'home#products'
+  constraints(:subdomain => 'admin') do
+    namespace(:admin, :path => '/') do
+      resources :sessions
+      get "sessions/new"
+      get 'logout' => 'sessions#destroy', :as => 'logout'
+      get 'login' => 'sessions#new', :as => 'login'
+      root :to => 'home#index'
+    end
   end
 
 
@@ -15,15 +21,13 @@ RealStuff::Application.routes.draw do
   resources :sizes
   resources :feature_flavors
   resources :flavors 
-  resources :sessions
+  
 
   
 
   root :to => 'home#index'
 
-  get "sessions/new"
-  get 'logout' => 'sessions#destroy', :as => 'logout'
-  get 'login' => 'sessions#new', :as => 'login'
+
 
   match 'products' => 'home#products'
   match 'services' => 'home#services'

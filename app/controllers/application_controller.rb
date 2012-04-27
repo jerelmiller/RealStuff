@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   include UrlHelper
 
   def not_authenticated
-    redirect_to login_url, :alert => 'First login to access this page'
+    redirect_to admin_login_url, :alert => 'First login to access this page'
   end 
 end

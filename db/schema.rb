@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -61,7 +60,6 @@ ActiveRecord::Schema.define(:version => 20120407080954) do
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "users_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,7 +73,6 @@ ActiveRecord::Schema.define(:version => 20120407080954) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",         :null => false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"

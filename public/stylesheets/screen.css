@@ -51,7 +51,7 @@ ul.sidenav {
     color: #bf1d37; }
 
 .header {
-  height: 271px;
+  height: 246px;
   width: 100%;
   min-width: 1000px; }
   .header .header_top {
@@ -93,19 +93,20 @@ ul.sidenav {
         .header .header_top .header_top_container ul.quicknav li {
           display: inline; }
   .header .header_bottom {
-    height: 220px;
+    height: 195px;
     margin-top: 1px; }
     .header .header_bottom .header_bottom_container {
       margin: 0 auto;
       width: 1000px;
-      height: 220px;
+      height: 195px;
       background: url(/images/cow_pattern.png); }
       .header .header_bottom .header_bottom_container #logo {
+        padding-top: 10px;
         padding-left: 20px; }
       .header .header_bottom .header_bottom_container #catch_phrase {
         font-family: "Walter Turncoat";
         text-shadow: 0px 1px 1px white;
-        margin-top: 50px;
+        margin: 22px 45px 0 0;
         text-align: center;
         font-size: 2.3em;
         vertical-align: middle; }
@@ -115,10 +116,10 @@ ul.sidenav {
 .menu_container {
   width: 1000px;
   margin: 0 auto;
-  height: 100px;
+  height: 75px;
   background: url(/images/cow_pattern.png); }
   .menu_container ul.menu {
-    line-height: 100px;
+    line-height: 75px;
     list-style-type: none;
     margin-top: 20px;
     margin-left: 80px;
