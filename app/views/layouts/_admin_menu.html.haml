@@ -1,0 +1,7 @@
+.menu_container
+  %ul.admin_menu
+    %li= link_to 'Home', admin_root_path(:subdomain => 'admin')
+    %li= link_to 'Products', admin_products_path(:subdomain => 'admin')
+    %li= link_to 'News', admin_articles_path(:subdomain => 'admin')
+    %li= link_to 'Events', admin_events_path(:subdomain => 'admin')
+    %li.no_margin_right= link_to 'Flavors', admin_flavors_path(:subdomain => 'admin')

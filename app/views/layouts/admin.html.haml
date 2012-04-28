@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title= yield :title
+    = stylesheet_link_tag :all
+    -#= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Just Me Again Down Here'
+    -#= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Schoolbell'
+    -#= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Coming Soon'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Walter Turncoat'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+
+  %body
+    = render :partial => 'layouts/admin_header'
+    - unless current_page?(admin_login_url)
+      = render :partial => 'layouts/admin_menu'
+    .content
+      = yield

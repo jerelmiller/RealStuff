@@ -3,6 +3,7 @@ class CreateFlavors < ActiveRecord::Migration
     create_table :flavors do |t|
       t.string :name
       t.integer :product_id
+      t.boolean :feature_flavor, :default => false
 
       t.timestamps
     end

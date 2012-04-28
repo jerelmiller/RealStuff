@@ -2,6 +2,9 @@
   .header_top
     .header_top_container
       %ul.quicknav.right
+        = puts current_user
+        - if current_user
+          %li= link_to 'Back to admin', admin_root_url(:subdomain => 'admin')
         %li= link_to 'Contact Us', root_path
         %li= link_to image_tag('/images/facebook.png'), root_path
         %li.small_margin= link_to image_tag('/images/twitter.png'), root_path

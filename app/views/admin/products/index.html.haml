@@ -1,0 +1,42 @@
+-#.list
+-#  .title.left
+-#    All products
+-#  .menu.right
+-#    %ul
+-#      %li= link_to 'Create a New Product', new_admin_product_path
+-#  .clear
+-#  %hr
+-#
+-#  - if @products.count > 0
+-#    - @products.each do |product|
+-#      = product.name
+-#      %br
+-#  - else
+-#    %br
+-#    You have no products. Please
+-#    = link_to 'create', new_admin_product_path
+-#    a new product
+
+.content_div.left 
+  .content_header
+    All Products
+  %hr
+  .body
+    - if @products.count > 0
+      - @products.each do |product|
+        = link_to product.name, edit_admin_product_path(product.id)
+        = "(#{number_to_currency product.price})"
+        %span.small= link_to '(delete)', admin_product_path(product.id), :method => :delete, :confirm => "Are you sure you want to delete #{product.name}?"
+        %br
+    - else
+      %br
+      You have no products. Please
+      = link_to 'create', new_admin_product_path
+      a new product
+
+.content_div.right
+  .normal
+    You currently have
+    = pluralize @products.count, 'product'
+    %br
+    = link_to 'Create a new product', new_admin_product_path

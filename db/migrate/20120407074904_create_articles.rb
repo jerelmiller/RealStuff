@@ -1,6 +1,6 @@
-class CreateNews < ActiveRecord::Migration
+class CreateArticles < ActiveRecord::Migration
   def self.up
-    create_table :news do |t|
+    create_table :articles do |t|
       t.string :title
       t.text :body, :default => nil
       t.integer :user_id

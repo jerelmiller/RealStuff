@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.integer :user_id
+      t.decimal :price, :default => 0.00
 
       t.timestamps
     end

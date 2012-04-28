@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(:version => 20120407080954) do
 
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "events", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -25,32 +33,20 @@ ActiveRecord::Schema.define(:version => 20120407080954) do
     t.datetime "updated_at"
   end
 
-  create_table "feature_flavors", :force => true do |t|
-    t.integer  "flavor_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "flavors", :force => true do |t|
     t.string   "name"
     t.integer  "product_id"
+    t.boolean  "feature_flavor", :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "flavors", ["name"], :name => "index_flavors_on_name"
 
-  create_table "news", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "products", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
+    t.decimal  "price",      :default => 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

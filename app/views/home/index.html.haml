@@ -61,9 +61,15 @@
       Feature Flavor
     %hr
     .body
-      This month's feature flavor is
       %br
-      %span.red Cake Batter
+      - if @feature_flavors.count > 0
+        = "This month's feature #{pluralize(@feature_flavors.count, 'flavor').sub(/\d/, '')} #{pluralize(@feature_flavors.count, 'is', 'are').sub(/\d/, '')}"
+        - @feature_flavors.each do |flavor|
+          %span.red= flavor
+          = flavor.product
+          %br
+      - else
+        There are currently no feature flavors
 #news.content_div.left
   .content_div_container
     .content_header

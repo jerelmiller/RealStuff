@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NewsControllerTest < ActionController::TestCase
+class ArticlesControllerTest < ActionController::TestCase
   setup do
     @news = news(:one)
   end

@@ -1,0 +1,24 @@
+- form_for [:admin, @flavor] do |f|
+  - if @flavor.errors.any?
+    .error
+      = image_tag 'Exclamation.png'
+      Please fix the following errors
+      %br
+      %br
+      - @flavor.errors.full_messages.each do |msg|
+        %li.message= msg
+  .input
+    %div= f.label :name
+    %div= f.text_field :name
+
+  .input
+    %div= f.label :product
+    %div= collection_select(:flavor, :product_id, Product.all, :id, :to_s)
+
+  .input
+    %div
+      = f.label :feature_flavor?
+      = f.check_box :feature_flavor
+
+  .submit
+    = f.submit

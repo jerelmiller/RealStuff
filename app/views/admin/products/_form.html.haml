@@ -1,0 +1,20 @@
+- form_for [:admin, @product] do |f|
+  - if @product.errors.any?
+    .error
+      = image_tag 'Exclamation.png'
+      Please fix the following errors
+      %br
+      %br
+      - @product.errors.full_messages.each do |msg|
+        %li.message= msg
+
+  .input
+    %div= f.label :name
+    %div= f.text_field :name
+
+  .input
+    %div= f.label :price
+    %div= f.text_field :price
+
+  .submit
+    = f.submit

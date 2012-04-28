@@ -12,9 +12,9 @@ $blue_final_gradient: rgba(127,142,161,.8)
 
 /* Font Variables */
 
-$just_me: 'Just Me Again Down Here', 'Helvetica'
+//$just_me: 'Just Me Again Down Here', 'Helvetica'
 $walter_turncoat: 'Walter Turncoat', 'Helvetica'
-$coming_soon: 'Coming Soon', 'Coming Soon'
+//$coming_soon: 'Coming Soon', 'Coming Soon'
 
 /* Mixins */
 @mixin box_shadow($color: #222, $x: 0px, $y: 2px, $blur: 2px, $spread: 0px)
@@ -53,6 +53,7 @@ $coming_soon: 'Coming Soon', 'Coming Soon'
   background: -webkit-radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
   background: -webkit-gradient(radial, $point, color-stop($start_percent, $start_color), color-stop($end_percent, $end_color)), $texture
   background: -ms-radial-gradient($point, $start_color $start_percent, $end_color $end_percent), $texture
+  background-attachment: fixed
   //filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='$start_color', endColorstr='$end_color')
 /* General Styles */
 
@@ -63,9 +64,12 @@ html, body
   width: 100%
   min-width: 1100px
   //background: rgba(127,142,161,.5)//$blue_gray
-  @include radial_gradient_texture(top, $blue_initial_gradient, 20%, $blue_final_gradient, 80%, url(/images/Texture.png))
+  //@include radial_gradient_texture(top, $blue_initial_gradient, 20%, $blue_final_gradient, 80%, url(/images/Texture.png))
   //background: url(/images/web_pattern3.png)
   font-family: $walter_turncoat
+
+body
+  @include radial_gradient_texture(top, $blue_initial_gradient, 20%, $blue_final_gradient, 80%, url(/images/Texture.png))
 
 a
   text-decoration: none
@@ -119,6 +123,37 @@ ul.sidenav
       color: $red
 
 
+//.admin_header
+//  height: 195px
+//  width: 100%
+//  min-width: 1000px
+//  margin-bottom: 20px
+//  .header_container
+//    margin: 0 auto
+//    width: 1000px
+//    height: 195px
+//    background: url(/images/cow_pattern.png)
+//    #logo
+//      padding-top: 10px
+//      //background: #CCC
+//      //padding: 20px
+//      //@include border_radius_bottom
+//      padding-left: 20px
+//      //position: relative
+//      //bottom: 60px
+//    #catch_phrase
+//      font-family: 'Walter Turncoat'
+//      text-shadow: 0px 1px 1px white
+//      //padding: 50px 0px 0px
+//      //margin-top: 20px
+//      margin: 22px 45px 0 0
+//      text-align: center
+//      font-size: 2.3em
+//      //margin-right: 20px
+//      vertical-align: middle
+//      .large_phrase
+//        font-size: 2.2em
+
 .header
   height: 246px
   width: 100%
@@ -158,6 +193,9 @@ ul.sidenav
         color: white
         li
           display: inline
+          font-size: 1.2em
+          line-height: 2.5em
+          //font-size: 1.2em
       //#logo
       //  //background: #CCC
       //  padding: 20px
@@ -221,18 +259,48 @@ ul.sidenav
 //  min-width: 1000px
 .menu_container
   width: 1000px
-  margin: 0 auto
-  height: 75px
+  margin: 20px auto 0
+  //height: 75px
   //background: $dark_initial_gradient
   //@include border_radius_all
   //@include box_shadow(#CCC, 0, 2px, 2px)
   background: url(/images/cow_pattern.png)
+  ul.admin_menu
+    line-height: 75px
+    list-style-type:none
+    width: 960px
+    font-size: 1.5em
+    margin: 20px 0 0px 40px
+    -webkit-margin-after: 0
+    -webkit-margin-before: 0
+    -moz-margin-after: 0
+    -moz-margin-before: 0
+    margin-after: 0
+    margin-before: 0
+    //margin-left: 40px
+    .no_margin_right
+      margin-right: 0 !important
+    li
+      display: inline
+      margin-right: 80px
+      padding: 0 10px
+      &:hover
+        border-bottom: 3px solid black
+        a
+          color: $red
+
+
   ul.menu
     line-height: 75px
+    -webkit-margin-after: 0
+    -webkit-margin-before: 0
+    -moz-margin-after: 0
+    -moz-margin-before: 0
     list-style-type: none
-    margin-top: 20px
+    //margin-top: 20px
+    margin: 20px 0 0px 80px
     //margin: 0 auto
-    margin-left: 80px
+    //margin-left: 80px
     //width: 760px
     width: 960px
     //background: black
@@ -275,13 +343,15 @@ ul.sidenav
 
 .content
   width: 1000px
-  margin: 0 auto
+  margin: 0px auto 230px
   //border: 1px solid blue
-  margin-bottom: 230px
-  margin-top: 10px
+  //margin-bottom: 230px
+  //margin-top: 10px
   //font-family: $coming_soon
   //a
     //color: $blue
+  .center
+    text-align: center
   span.red
     color: $red
   hr
@@ -289,26 +359,61 @@ ul.sidenav
     text-align: left !important
     margin-left: 0
     border: 1px solid black
-  .content_div_container
-    margin: 30px
+  //.content_div_container
+  //  margin: 30px
   .content_header
     font-size: 2em
   .content_header_small
     text-align: left !important
     font-size: 1.7em !important
   .about_div_left
-    width: 280px
+    width: 220px
     background: url(/images/cow_pattern3.png)
-    margin: 10px 0
+    margin: 20px 0 0
+    padding: 30px
   .about_div_right
-    width: 700px
+    width: 640px
     background: url(/images/cow_pattern3.png)
-    margin: 10px 0
+    margin: 20px 0 0
+    padding: 30px
   .content_div
     //background: white
     background: url(/images/cow_pattern3.png)
-    margin: 10px 0
-    width: 490px
+    margin: 20px 0 0
+    width: 430px
+    padding: 30px
+
+    .body
+      font-size: 1.5em
+      margin: 40px 0 0px
+      text-align: justify
+      span.small
+        font-size: .7em
+
+      .flavor
+        margin-left: 20px
+        font-size: .8em
+      .no_flavor
+        font-size: .8em
+        margin: 0 0 20px 20px
+
+
+    .normal
+      text-align: center
+      font-size: 1.5em
+    .no_center
+      text-align: left
+      li
+        margin-left: 40px
+        font-size: .8em
+        list-style-type: none
+
+  .content_div_full
+    background: url(/images/cow_pattern3.png)
+    width: 100%
+    padding: 30px 0
+    margin: 20px 0 0
+
     //padding: 30px
       //width: 430px
     //  margin: 20px auto
@@ -332,6 +437,86 @@ ul.sidenav
       font-size: 1.5em
       margin: 40px 0 0px
       text-align: justify
+
+  .list
+    width: 940px
+    margin: 20px 0 0
+    background: url(/images/cow_pattern3.png)
+    padding: 30px
+    font-size: 1.5em
+    .title
+      font-size: 2em
+
+    .menu
+      ul
+        list-style-type: none
+        font-size: .8em
+        li
+          display: inline
+          line-height: 2em
+
+  .one_column_form
+    width: 400px
+    margin: 20px auto
+    padding: 30px
+    background: url(/images/cow_pattern3.png)
+    .title
+      font-size: 2em
+    //form
+      //width: 235px
+
+  .full_form
+    width: 940px
+    margin: 20px auto
+    background: url(/images/cow_pattern3.png)
+    padding: 30px
+    .title
+      font-size: 2em
+
+  form
+    //padding: 20px
+    //margin: 0 auto
+    select
+      font-size: 1.2em
+    .error
+      color: red
+      background: #fceded
+      padding: 5px 15px 15px
+      img
+        position: relative
+        top: 10px
+      .message
+        margin-left: 40px
+
+    .field_with_errors
+      color: red
+      input[type=text]
+        border: 2px solid red
+        @include border_radius_all(3px)
+      padding: 0
+
+    label
+      font-size: 1.5em
+    .input
+      width: 220px
+      margin: 10px 0
+    input[type=text], input[type=password]
+      padding: 10px
+      font-size: 1.1em
+      border: 1px solid #AAA
+      @include border_radius_all(2px)
+      width: 215px
+
+    input[type=submit]
+      font-size: 1em
+      background: #1FAEEB
+      border: 1px solid #118EC3
+      padding: 10px .5em
+      @include border_radius_all(3px)
+      color: white
+      &:hover
+        background: #1FAEEB
+        opacity: .8
   #about
     //height: 785px
     .story_text
@@ -343,6 +528,10 @@ ul.sidenav
   #story
     .story_text
       font-size: 1.2em
+
+  #pics
+    padding: 0
+    width: 490px
 
     
   #sidemenu
@@ -446,7 +635,7 @@ ul.sidenav
   
       
 .footer
-  margin-top: -220px
+  margin-top: -200px
   clear: both
   height: 220px
   min-width: 1000px

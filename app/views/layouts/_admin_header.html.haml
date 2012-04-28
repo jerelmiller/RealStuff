@@ -1,0 +1,27 @@
+.header
+  .header_top
+    .header_top_container
+      %ul.quicknav.right
+        - if current_user
+          %li= link_to 'View Site', root_url(:subdomain => '')
+          %li= link_to current_user, '#'
+          %li= link_to 'Logout', admin_logout_path
+        - else
+          %li= link_to 'Login', admin_login_path(:subdomain => 'admin')
+  .header_bottom
+    .header_bottom_container
+      #logo.left
+        = link_to image_tag('/images/logo_realstuff.png'), root_path(:subdomain => 'admin')
+      #catch_phrase.right
+        %span.large_phrase Real Stuff
+        %br
+        Administration
+
+-#.admin_header
+-#  .header_container
+-#    #logo.left
+-#      = link_to image_tag('/images/logo_realstuff.png'), root_path(:subdomain => 'admin')
+-#    #catch_phrase.right
+-#      %span.large_phrase Real Stuff
+-#      %br
+-#      Administration

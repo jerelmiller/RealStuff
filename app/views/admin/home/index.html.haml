@@ -1,1 +1,33 @@
-This file is in admin/home
+-#.content_div_full
+-#  .content_header.center
+-#    Welcome
+-#    %span.red= current_user
+
+.content_div.right
+  .content_header
+    Products
+  %hr
+  .body
+    = "You have #{@products_count} "
+    = link_to 'products', admin_products_path(:subdomain => 'admin')
+    = "in your inventory with a total of #{@flavors_count} "
+    = link_to 'flavors', flavors_path(:subdomain => 'admin')
+  .clear
+
+.content_div.left
+  .content_header
+    News
+  %hr
+  .body
+    = "You have #{@news_count} "
+    = link_to 'news articles', articles_path(:subdomain => 'admin')
+  .clear
+
+.content_div.left
+  .content_header
+    Events
+  %hr
+  .body
+    = "You have created #{@events_count} "
+    = link_to 'events', events_path(:subdomain => 'admin')
+

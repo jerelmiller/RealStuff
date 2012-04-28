@@ -1,0 +1,32 @@
+- content_for :title do 
+  Flavors
+
+
+.content_div.left
+  .content_header Flavors
+  %hr
+
+  .body
+    - @products.each do |product|
+      = product.name
+      %br
+      - if product.get_flavors.count > 0
+        - product.get_flavors.each do |flavor|
+          .flavor
+            = link_to flavor.name, edit_admin_flavor_path(flavor.id)
+            %span.small= link_to '(delete)', admin_flavor_path(flavor.id), :method => :delete, :confirm => "Are you sure you want to delete #{flavor}?"
+      - else
+        .no_flavor
+          There are no flavors
+
+      %br
+
+.content_div.right
+  .normal.no_center
+    = "You have created #{@flavors_count} total #{pluralize(@flavors_count, 'flavor').sub(/\d/, '')}"
+    - @products.each do |product|
+      %li= "#{product.get_flavors.count} #{product} #{pluralize(product.get_flavors.count, 'flavor').sub(/\d/, '')}"
+
+  %br
+  .normal
+    = link_to 'Create a new flavor', new_admin_flavor_path
