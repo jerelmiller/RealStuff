@@ -1,4 +1,10 @@
 = form_tag admin_sessions_path do
+  - if flash[:error]  
+    .login-error
+      = image_tag 'Exclamation.png'
+      - flash.each do |key, msg|  
+        &nbsp;
+        %span.message= msg
   .input
     = label_tag :email
     %br

@@ -8,7 +8,9 @@ class Admin::SessionsController < ApplicationController
     if user
       redirect_back_or_to root_url, :notice => 'Logged in'
     else
-      redirect_to root_url, :notice => 'Email or password was invalid'
+      flash[:error] = 'Email or password was invalid'
+      render :action => 'new'
+      #redirect_to root_url, :notice => 'Email or password was invalid'
     end
   end
 

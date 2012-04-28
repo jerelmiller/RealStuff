@@ -258,6 +258,14 @@ ul.sidenav {
       font-size: 2em; }
   .content form select {
     font-size: 1.2em; }
+  .content form .login-error {
+    color: red;
+    background: #fceded;
+    padding: 0 10px 15px;
+    margin: 0 auto 20px; }
+    .content form .login-error img {
+      position: relative;
+      top: 10px; }
   .content form .error {
     color: red;
     background: #fceded;
