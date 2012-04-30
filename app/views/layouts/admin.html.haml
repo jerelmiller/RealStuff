@@ -12,7 +12,7 @@
 
   %body
     = render :partial => 'layouts/admin_header'
-    - unless current_page?(admin_login_url) or current_page?(admin_sessions_url)
+    - unless current_page?(admin_login_url) or current_page?(admin_sessions_url) or current_page?(admin_root_url)
       = render :partial => 'layouts/admin_menu'
     .content
       = yield

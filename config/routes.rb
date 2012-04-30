@@ -2,6 +2,7 @@ RealStuff::Application.routes.draw do
 
   constraints(:subdomain => 'admin') do
     namespace(:admin, :path => '/') do
+      root :to => 'sessions#new'
       resources :sessions
       resources :products
       resources :events
@@ -11,7 +12,7 @@ RealStuff::Application.routes.draw do
       get 'sessions/new'
       get 'logout' => 'sessions#destroy', :as => 'logout'
       get 'login' => 'sessions#new', :as => 'login'
-      root :to => 'home#index'
+      get 'home' => 'home#index', :as => 'home'
     end
   end
 
