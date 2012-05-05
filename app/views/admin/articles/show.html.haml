@@ -1,0 +1,9 @@
+- content_for :title do
+  = @article.title
+
+.mid_column
+  .title
+    = @article.title
+    %span.small= link_to '(edit)', edit_admin_article_path(@article)
+  .body= simple_format @article.body
+  = link_to 'Back', admin_articles_path, :id => 'back'

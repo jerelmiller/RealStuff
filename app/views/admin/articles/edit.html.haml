@@ -1,0 +1,9 @@
+- content_for :title do
+  = "Editing #{@article.title}"
+
+.one_column_form
+  .title
+    = "Editing #{@article.title}"
+  %hr
+  %br
+  = render :partial => 'form'

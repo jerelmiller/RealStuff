@@ -1,0 +1,22 @@
+- content_for :title do 
+  Articles
+
+.content_div.left
+  .content_header
+    All Articles
+  %hr
+  .body
+    - if @articles.count > 0
+      - @articles.each do |article|
+        = link_to article.title, admin_article_path(article)
+        %span.medium{:id => "article#{article.id}"}= simple_format truncate(article.body, :length => 80, :omission => '... (continued)')
+        .read_more{:id => "more#{article.id}"}= more_link(article)
+        %br
+
+
+.content_div.right
+  .normal
+    You currently have
+    = pluralize @articles.count, 'article'
+    %br
+    = link_to 'Write a new article', new_admin_article_path

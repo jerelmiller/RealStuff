@@ -376,6 +376,7 @@ ul.sidenav
     background: url(/images/cow_pattern3.png)
     margin: 20px 0 0
     padding: 30px
+
   .content_div
     //background: white
     background: url(/images/cow_pattern3.png)
@@ -389,7 +390,11 @@ ul.sidenav
       text-align: justify
       span.small
         font-size: .7em
+      span.medium
+        font-size: .8em
 
+      .read_more, .less
+        font-size: .8em
       .flavor
         margin-left: 20px
         font-size: .8em
@@ -407,6 +412,21 @@ ul.sidenav
         margin-left: 40px
         font-size: .8em
         list-style-type: none
+
+  .mid_column
+    background: url(/images/cow_pattern3.png)
+    width: 700px
+    padding: 30px
+    margin: 20px auto 0
+    .title
+      font-size: 2.2em
+    .body
+      font-size: 1.4em
+    span.small
+      font-size: .6em
+    a#back
+      font-size: 1.4em
+    
 
   .content_div_full
     background: url(/images/cow_pattern3.png)
@@ -515,6 +535,12 @@ ul.sidenav
       border: 1px solid #AAA
       @include border_radius_all(2px)
       width: 215px
+
+    textarea
+      padding: 10px
+      font-size: 1.1em
+      border: 1px solid #AAA
+      @include border_radius_all(2px)
 
     input[type=submit]
       font-size: 1em

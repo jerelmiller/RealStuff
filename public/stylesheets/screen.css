@@ -204,6 +204,10 @@ ul.sidenav {
       text-align: justify; }
       .content .content_div .body span.small {
         font-size: 0.7em; }
+      .content .content_div .body span.medium {
+        font-size: 0.8em; }
+      .content .content_div .body .read_more, .content .content_div .body .less {
+        font-size: 0.8em; }
       .content .content_div .body .flavor {
         margin-left: 20px;
         font-size: 0.8em; }
@@ -219,6 +223,19 @@ ul.sidenav {
         margin-left: 40px;
         font-size: 0.8em;
         list-style-type: none; }
+  .content .mid_column {
+    background: url(/images/cow_pattern3.png);
+    width: 700px;
+    padding: 30px;
+    margin: 20px auto 0; }
+    .content .mid_column .title {
+      font-size: 2.2em; }
+    .content .mid_column .body {
+      font-size: 1.4em; }
+    .content .mid_column span.small {
+      font-size: 0.6em; }
+    .content .mid_column a#back {
+      font-size: 1.4em; }
   .content .content_div_full {
     background: url(/images/cow_pattern3.png);
     width: 100%;
@@ -296,6 +313,13 @@ ul.sidenav {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     width: 215px; }
+  .content form textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #aaaaaa;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; }
   .content form input[type=submit] {
     font-size: 1em;
     background: #1faeeb;

@@ -1,0 +1,22 @@
+- form_for [:admin, @article] do |f|
+  - if @article.errors.any?
+    .error
+      = image_tag 'Exclamation.png'
+      Please fix the following errors
+      %br
+      %br
+      - @article.errors.full_messages.each do |msg|
+        %li.message= msg
+
+  .input
+    %div= f.label :title
+    %div= f.text_field :title
+
+  .input
+    %div= f.label :body
+    %div= f.text_area :body, :size => '30x15'
+
+    = f.hidden_field :user_id, :value => current_user.id
+
+  .submit
+    = f.submit

@@ -75,15 +75,17 @@
     .content_header
       News
     %hr
-    .article
-      .news_title
-        =link_to 'Introducing Real StuffCakes', root_url
-      .news_body
-        We have a new product! Real StuffCakes! Head on out to Zoe's to check it out today! We promise you will love the newReal...
+    - if @articles.count > 0
+      - @articles.each do |article|
+        .article
+          .news_title
+            =link_to article.title, article_path(article)
+          .news_body
+            = simple_format truncate(article.body, :length => 100, :omission => '... (continued)')
+            -#%br
+            -#%br
+            %span.continue= link_to 'Continue Reading', article_path(article)
         %br
-        %br
-        %span.continue= link_to 'Continue Reading', root_path
-        -#StuffCake. Imagine biting into a cupcake filled with the delicious flavor of Real Stuff Ice Cream topped with adelicious cream cheese frosting. Now that your mouth is watering, come try it out!
     
 -##media.content_div.right
 -#  .video
