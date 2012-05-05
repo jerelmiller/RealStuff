@@ -4,7 +4,7 @@
       %ul.quicknav.right
         - if current_user
           %li= link_to current_user, '#'
-          %li= link_to 'View Site', 'http://localhost.local:3000', :target => '_blank'
+          %li= link_to 'View Site', 'http://realstuff.heroku.com', :target => '_blank'
           %li= link_to 'Logout', admin_logout_path
         - else
           %li= link_to 'Login', admin_login_path(:subdomain => 'admin')
